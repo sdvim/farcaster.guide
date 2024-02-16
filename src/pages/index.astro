@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+const welcomePosts = await getCollection('welcome');
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<style>
+			body {
+				font: 16px sans-serif;
+				margin: 0 auto; 
+				max-width: 52ch;
+				padding: 1em;
+				line-height: 1.66;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			p {
+				margin-top: -2em;
+				opacity: 0.66;
+				white-space: pre-wrap;
+			}
+			h3 {
+				margin-top: 8em;
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 0.33em;
+					height: 0.33em;
+					margin-left: 0.5ch;
+					background: #9B69C2;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>farcaster.guide</h1>
+		{welcomePosts.sort((a, b) => a.data.sortOrder - b.data.sortOrder).map(({body, data}) => {
+			return <>
+				<h3>{data.title}</h3>
+				<p>{body}</p>
+			</>
+		})}
+	</body>
+</html>
