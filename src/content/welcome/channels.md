@@ -3,8 +3,8 @@ title: Channels
 sortOrder: 5
 ---
 
-Groups that can be followed and casted to.
+Interest groups that can be followed and casted to.
 
-Created by paying 2500 warps per year. Hosts can moderate by setting channel norms, hiding casts, and banning users. Moderation is only available on Warpcast, not yet at the Farcaster protocol level.
+Created by paying 2500 warps per year. Hosts moderate on Warpcast by setting channel norms, hiding casts, and banning users. Writing /channel-name renders a hyperlink but does not associate casts to the channel.
 
 Similar to: Subreddits

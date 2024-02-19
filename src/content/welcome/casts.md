@@ -3,8 +3,10 @@ title: Casts
 sortOrder: 5
 ---
 
-Public messages that can be seen by anyone.
+Public messages visible to anyone.
 
-Limited to 320 characters. Can belong to a channel and potentially reach both caster's and channel's following lists if an engagement threshold is met. Links at top-level casts do not result in algorithm nerfs like in other platforms.
+Limited to 320 characters. Can belong to one channel and possibly reach channel followers if a certain engagement threshold is met. Reach always includes caster's followers.
+
+Warpcast algorithm does not nerf top level casts with links. 
 
 Similar to: Tweets
